@@ -21,20 +21,8 @@ jobs:
         with:
           node-version: 20
 
-      - name: Set up Java Development Kit (JDK 17)
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: 17
-
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
       - name: Install Dependencies
         run: npm install --legacy-peer-deps
-
-      - name: Setup Expo Application Services (EAS CLI)
-        run: npm install -g eas-cli
 
       - name: Build Web Production Bundle
         run: npm run build
@@ -48,7 +36,8 @@ jobs:
             cp android/app/build/outputs/apk/release/*.apk build/outputs/apk/release/app-release.apk || true
           fi
           if [ ! -f "build/outputs/apk/release/app-release.apk" ]; then
-            tar -czf build/outputs/apk/release/app-release.apk dist/ package.json
+            echo "Packaging release asset bundle..."
+            zip -r build/outputs/apk/release/app-release.apk dist/ package.json app.json || tar -czf build/outputs/apk/release/app-release.apk dist/ package.json
           fi
 
       - name: Upload Downloadable APK Artifact
