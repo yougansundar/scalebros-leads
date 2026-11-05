@@ -1,0 +1,6 @@
+{
+  "name": "LeadFlow AI — Local Business Finder & WhatsApp Cold Outreach",
+  "description": "Discover local businesses by city, analyze digital marketing gaps, and run personalized 1-tap WhatsApp cold outreach campaigns.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
