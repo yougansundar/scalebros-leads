@@ -1,0 +1,27 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "ais-dev-fuv3af6ji5whhqh5iayoc4-660728937195.asia-east1.run",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "leads",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "https://ais-dev-fuv3af6ji5whhqh5iayoc4-660728937195.asia-east1.run.app/favicon.ico",
+      "type": "image/x-icon",
+      "isSquare": false,
+      "isPng": false,
+      "isWebp": false,
+      "isJpg": false,
+      "width": 0,
+      "is512x512": false,
+      "is256x256": false,
+      "is192x192": false
+    }
+  ],
+  "id": "scalebros",
+  "description": "it can give you a leads for your busness"
+}
