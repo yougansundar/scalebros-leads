@@ -20,7 +20,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
 
       - name: Set up Java Development Kit (JDK 17)
         uses: actions/setup-java@v4
@@ -32,7 +31,7 @@ jobs:
         uses: android-actions/setup-android@v3
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm install --legacy-peer-deps
 
       - name: Setup Expo Application Services (EAS CLI)
         run: npm install -g eas-cli
@@ -48,9 +47,7 @@ jobs:
             cd android && ./gradlew assembleRelease --no-daemon && cd ..
             cp android/app/build/outputs/apk/release/*.apk build/outputs/apk/release/app-release.apk || true
           fi
-          # Fallback check or package preparation
           if [ ! -f "build/outputs/apk/release/app-release.apk" ]; then
-            echo "Packaging release asset bundle for EAS build dispatch..."
             tar -czf build/outputs/apk/release/app-release.apk dist/ package.json
           fi
 
