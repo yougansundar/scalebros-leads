@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "ScaleBros Leads",
+    "slug": "scalebros-leads",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./public/assets/aistudio/ScaleBros_Growth_Logo_69641325.png",
+    "scheme": "scalebros",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B0F19"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.leadflow.ai",
+      "infoPlist": {
+        "LSApplicationQueriesSchemes": [
+          "whatsapp",
+          "tel"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0B0F19"
+      },
+      "package": "com.leadflow.ai",
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.VIBRATE"
+      ],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [
+            {
+              "scheme": "leadflow"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": []
+  }
+}
